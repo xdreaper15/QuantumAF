@@ -25,13 +25,9 @@ public class ShootingMechanic : MonoBehaviour {
 		
 
 	}
-
-
-	// Update is called once per frame
-	void FixedUpdate () 
+		
+	public void Shoot () 
     {
-		InputDevice inputDevice = InputManager.ActiveDevice;
-		fire = inputDevice.RightBumper;
 
 		if (fireBuffer == 0)
 		{
@@ -40,15 +36,13 @@ public class ShootingMechanic : MonoBehaviour {
 			{
 				fireBuffer = 1;
 
-//				GameObject bulletclone = (GameObject)Instantiate (Bullet, bulletPosition.position, bulletPosition.rotation); //Spawns Bullet Clone
-//
-//                 Rigidbody bulletclone = bulletPosition.GetComponentInParent<Rigidbody>();
-//
-//				bulletRigid.AddForce (objectpos.transform.forward * bulletSpeed);
-//
-//				Destroy (bulletclone, 1f); //Destroys Warning Clone
-//
-//				Invoke ("FireBuffer",fireRate);
+				GameObject bulletclone = (GameObject)Instantiate (Bullet, bulletPosition.position, bulletPosition.rotation); //Spawns Bullet Clone
+
+                Rigidbody bulletRigid = bulletclone.GetComponent<Rigidbody>();
+
+				bulletRigid.AddForce (objectpos.transform.forward * bulletSpeed);
+
+				Invoke ("FireBuffer",fireRate);
 			}
 		}
 	}

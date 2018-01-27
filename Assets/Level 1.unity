@@ -504,6 +504,7 @@ MonoBehaviour:
   boostText: {fileID: 932555225}
   booster: {fileID: 2100000, guid: e1454e7fe2044064fac70675efba86df, type: 2}
   playerNum: 0
+  playerobj: {fileID: 335346832}
 --- !u!54 &335346834
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1774,7 +1775,8 @@ MonoBehaviour:
   speedText: {fileID: 1061641579}
   boostText: {fileID: 932555225}
   booster: {fileID: 2100000, guid: e1454e7fe2044064fac70675efba86df, type: 2}
-  playerNum: 0
+  playerNum: 1
+  playerobj: {fileID: 1988713977}
 --- !u!54 &1988713981
 Rigidbody:
   m_ObjectHideFlags: 0
