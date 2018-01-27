@@ -26,6 +26,8 @@ public class ReverseNormals : MonoBehaviour {
 				}
 				mesh.SetTriangles(triangles, m);
 			}
-		}		
+		}	
+
+		this.GetComponent<MeshCollider> ().sharedMesh = filter.mesh;
 	}
 }
