@@ -300,11 +300,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 16892886}
   m_Mesh: {fileID: 4300000, guid: 68ba16b8771f0374ca106badfad73607, type: 3}
---- !u!1 &203410197 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1525943913746892, guid: f13ad397a32048149b9f22fda9e6c60f,
-    type: 2}
-  m_PrefabInternal: {fileID: 555660345}
 --- !u!1001 &246124608
 Prefab:
   m_ObjectHideFlags: 0
@@ -455,7 +450,6 @@ GameObject:
   - component: {fileID: 278947903}
   - component: {fileID: 278947902}
   - component: {fileID: 278947901}
-  - component: {fileID: 278947900}
   m_Layer: 0
   m_Name: Player4
   m_TagString: Untagged
@@ -463,25 +457,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &278947900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 278947899}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70efa4793a1944d41a3fa6d29538d5ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 278947903}
-  bulletPosition: {fileID: 1825077242}
-  Bullet: {fileID: 1825077241}
-  objectpos: {fileID: 278947903}
-  bulletSpeed: 3000
-  fire: 0
-  fireBuffer: 0
-  fireRate: 0.3
 --- !u!114 &278947901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -681,7 +656,6 @@ GameObject:
   - component: {fileID: 335346835}
   - component: {fileID: 335346834}
   - component: {fileID: 335346833}
-  - component: {fileID: 335346837}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -746,25 +720,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &335346837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 335346832}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70efa4793a1944d41a3fa6d29538d5ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 335346835}
-  bulletPosition: {fileID: 2110527334}
-  Bullet: {fileID: 203410197}
-  objectpos: {fileID: 335346835}
-  bulletSpeed: 3000
-  fire: 0
-  fireBuffer: 0
-  fireRate: 0.3
 --- !u!1 &387489668
 GameObject:
   m_ObjectHideFlags: 0
@@ -2851,11 +2806,6 @@ Prefab:
     - {fileID: 54897685623288316, guid: f13ad397a32048149b9f22fda9e6c60f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: f13ad397a32048149b9f22fda9e6c60f, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1581082257 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1525943913746892, guid: f13ad397a32048149b9f22fda9e6c60f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1581082256}
 --- !u!4 &1581082258 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4864222595278440, guid: f13ad397a32048149b9f22fda9e6c60f,
@@ -3054,11 +3004,6 @@ Prefab:
     - {fileID: 54897685623288316, guid: f13ad397a32048149b9f22fda9e6c60f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: f13ad397a32048149b9f22fda9e6c60f, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1825077241 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1525943913746892, guid: f13ad397a32048149b9f22fda9e6c60f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1825077240}
 --- !u!4 &1825077242 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4864222595278440, guid: f13ad397a32048149b9f22fda9e6c60f,
@@ -3074,7 +3019,6 @@ GameObject:
   - component: {fileID: 1829295493}
   - component: {fileID: 1829295492}
   - component: {fileID: 1829295491}
-  - component: {fileID: 1829295490}
   m_Layer: 0
   m_Name: Player3
   m_TagString: Untagged
@@ -3082,25 +3026,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1829295490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1829295489}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70efa4793a1944d41a3fa6d29538d5ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 1829295493}
-  bulletPosition: {fileID: 1581082258}
-  Bullet: {fileID: 1581082257}
-  objectpos: {fileID: 1829295493}
-  bulletSpeed: 3000
-  fire: 0
-  fireBuffer: 0
-  fireRate: 0.3
 --- !u!114 &1829295491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3338,11 +3263,6 @@ Transform:
   m_Father: {fileID: 1829295493}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1978441862 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1525943913746892, guid: f13ad397a32048149b9f22fda9e6c60f,
-    type: 2}
-  m_PrefabInternal: {fileID: 868562799}
 --- !u!1 &1988713977
 GameObject:
   m_ObjectHideFlags: 0
@@ -3353,7 +3273,6 @@ GameObject:
   - component: {fileID: 1988713982}
   - component: {fileID: 1988713981}
   - component: {fileID: 1988713980}
-  - component: {fileID: 1988713978}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Untagged
@@ -3361,25 +3280,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1988713978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1988713977}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70efa4793a1944d41a3fa6d29538d5ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 1988713982}
-  bulletPosition: {fileID: 622399854}
-  Bullet: {fileID: 1978441862}
-  objectpos: {fileID: 1988713982}
-  bulletSpeed: 3000
-  fire: 0
-  fireBuffer: 0
-  fireRate: 0.3
 --- !u!114 &1988713980
 MonoBehaviour:
   m_ObjectHideFlags: 0
