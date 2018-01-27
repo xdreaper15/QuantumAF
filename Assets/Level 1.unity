@@ -478,6 +478,9 @@ MonoBehaviour:
   bulletPosition: {fileID: 1825077242}
   Bullet: {fileID: 1825077241}
   objectpos: {fileID: 278947903}
+  bulletSpeed: 3000
+  fire: 0
+  fireBuffer: 0
   fireRate: 0.3
 --- !u!114 &278947901
 MonoBehaviour:
@@ -499,6 +502,13 @@ MonoBehaviour:
   playerobj: {fileID: 278947899}
   EachplayerRigid: {fileID: 0}
   EachplayerTrans: {fileID: 0}
+  SetCam1: {fileID: 1449412279}
+  SetCam2: {fileID: 305239818}
+  SetCam3: {fileID: 1481032454}
+  SetCam4: {fileID: 1296338788}
+  AllSeeingEye: {fileID: 789448177}
+  speedText3: {fileID: 559757760}
+  boostText3: {fileID: 2094646171}
 --- !u!54 &278947902
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -699,6 +709,13 @@ MonoBehaviour:
   playerobj: {fileID: 335346832}
   EachplayerRigid: {fileID: 0}
   EachplayerTrans: {fileID: 0}
+  SetCam1: {fileID: 1449412279}
+  SetCam2: {fileID: 305239818}
+  SetCam3: {fileID: 1481032454}
+  SetCam4: {fileID: 1296338788}
+  AllSeeingEye: {fileID: 789448177}
+  speedText3: {fileID: 559757760}
+  boostText3: {fileID: 2094646171}
 --- !u!54 &335346834
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -744,6 +761,9 @@ MonoBehaviour:
   bulletPosition: {fileID: 2110527334}
   Bullet: {fileID: 203410197}
   objectpos: {fileID: 335346835}
+  bulletSpeed: 3000
+  fire: 0
+  fireBuffer: 0
   fireRate: 0.3
 --- !u!1 &387489668
 GameObject:
@@ -784,7 +804,6 @@ GameObject:
   m_Component:
   - component: {fileID: 423981875}
   - component: {fileID: 423981874}
-  - component: {fileID: 423981873}
   - component: {fileID: 423981872}
   - component: {fileID: 423981876}
   m_Layer: 5
@@ -810,27 +829,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &423981873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 423981871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
 --- !u!223 &423981874
 Canvas:
   m_ObjectHideFlags: 0
@@ -1460,6 +1458,87 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 765459100}
+--- !u!1 &789448174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 789448178}
+  - component: {fileID: 789448177}
+  - component: {fileID: 789448176}
+  - component: {fileID: 789448175}
+  m_Layer: 0
+  m_Name: AllSeeingEye
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &789448175
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 789448174}
+  m_Enabled: 1
+--- !u!124 &789448176
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 789448174}
+  m_Enabled: 1
+--- !u!20 &789448177
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 789448174}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 70
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &789448178
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 789448174}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.0491486, y: -3.0293503, z: -99.23}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &850934858
 GameObject:
   m_ObjectHideFlags: 0
@@ -1772,7 +1851,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &932555223
 GameObject:
@@ -2137,7 +2216,7 @@ GameObject:
   - component: {fileID: 1296338786}
   - component: {fileID: 1296338785}
   m_Layer: 0
-  m_Name: Main Camera 3
+  m_Name: Main Camera 4
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2297,7 +2376,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1340979296}
   - component: {fileID: 1340979299}
-  - component: {fileID: 1340979298}
   - component: {fileID: 1340979297}
   - component: {fileID: 1340979300}
   m_Layer: 5
@@ -2343,27 +2421,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1340979298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1340979295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
 --- !u!223 &1340979299
 Canvas:
   m_ObjectHideFlags: 0
@@ -2813,7 +2870,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1583409354}
   - component: {fileID: 1583409357}
-  - component: {fileID: 1583409356}
   - component: {fileID: 1583409355}
   - component: {fileID: 1583409358}
   m_Layer: 5
@@ -2859,27 +2915,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1583409356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1583409353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
 --- !u!223 &1583409357
 Canvas:
   m_ObjectHideFlags: 0
@@ -3062,6 +3097,9 @@ MonoBehaviour:
   bulletPosition: {fileID: 1581082258}
   Bullet: {fileID: 1581082257}
   objectpos: {fileID: 1829295493}
+  bulletSpeed: 3000
+  fire: 0
+  fireBuffer: 0
   fireRate: 0.3
 --- !u!114 &1829295491
 MonoBehaviour:
@@ -3083,6 +3121,13 @@ MonoBehaviour:
   playerobj: {fileID: 1829295489}
   EachplayerRigid: {fileID: 0}
   EachplayerTrans: {fileID: 0}
+  SetCam1: {fileID: 1449412279}
+  SetCam2: {fileID: 305239818}
+  SetCam3: {fileID: 1481032454}
+  SetCam4: {fileID: 1296338788}
+  AllSeeingEye: {fileID: 789448177}
+  speedText3: {fileID: 559757760}
+  boostText3: {fileID: 2094646171}
 --- !u!54 &1829295492
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3174,7 +3219,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1884407646}
   - component: {fileID: 1884407649}
-  - component: {fileID: 1884407648}
   - component: {fileID: 1884407647}
   - component: {fileID: 1884407650}
   m_Layer: 5
@@ -3220,27 +3264,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1884407648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1884407645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
 --- !u!223 &1884407649
 Canvas:
   m_ObjectHideFlags: 0
@@ -3353,6 +3376,9 @@ MonoBehaviour:
   bulletPosition: {fileID: 622399854}
   Bullet: {fileID: 1978441862}
   objectpos: {fileID: 1988713982}
+  bulletSpeed: 3000
+  fire: 0
+  fireBuffer: 0
   fireRate: 0.3
 --- !u!114 &1988713980
 MonoBehaviour:
@@ -3374,6 +3400,13 @@ MonoBehaviour:
   playerobj: {fileID: 1988713977}
   EachplayerRigid: {fileID: 0}
   EachplayerTrans: {fileID: 0}
+  SetCam1: {fileID: 1449412279}
+  SetCam2: {fileID: 305239818}
+  SetCam3: {fileID: 1481032454}
+  SetCam4: {fileID: 1296338788}
+  AllSeeingEye: {fileID: 789448177}
+  speedText3: {fileID: 559757760}
+  boostText3: {fileID: 2094646171}
 --- !u!54 &1988713981
 Rigidbody:
   m_ObjectHideFlags: 0
