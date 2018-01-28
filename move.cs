@@ -7,32 +7,40 @@ using InControl;
 
 public class Move : MonoBehaviour {
 
-	private float pitchSens = 200f;
-	private float rollSens = 600f;
-	private float yawSens = 600f;
+	private float pitchSens = 300*3.5f;
+	private float rollSens = 600*3.5f;
+	private float yawSens = 600*3.5f;
 	[SerializeField]public static float boostAmt;
-	[SerializeField]public static float speedValue;
+	private static float speedValue;
 	public static float boostStart = 500f;
 	private Vector3 speed;
 	private Vector3 strafeSpeed;
-	float ThrustMod = 50;
-	float boostMod = 2;
+	float ThrustMod = 40;
+	float BoostMod = 30;
 	public Text speedText;
 	public Text boostText;
 	public static Rigidbody rb;
 	public Material booster; 
 
 	private float fireBuffer;
-	private float fireRate = 0.05f;
+	private float fireRate = 0.1f;
 	public Transform bulletPosition;
 	public GameObject Bullet;
-	private float bulletSpeed = 3000f;
+	private float bulletSpeed = 10000f;
 	private float fire;
 
 	public int playerNum; 
 	public GameObject playerobj;
 	public Rigidbody EachplayerRigid;
 	public Transform EachplayerTrans;
+	public Camera SetCam1;
+	public Camera SetCam2;
+	public Camera SetCam3;
+	public Camera SetCam4;
+	public Camera AllSeeingEye;
+
+	public Text speedText3;
+	public Text boostText3;
 
 	float intRightstickx;
 	float intLeftstickx;
@@ -47,12 +55,37 @@ public class Move : MonoBehaviour {
 		fireBuffer = 0;
 		boostAmt = boostStart;
 		SetUIText ();
+
+		if (InputManager.Devices.Count == 1) 
+		{
+			SetCam1.rect = new Rect(0, 0, 1, 1);
+		}
+		else if (InputManager.Devices.Count == 2) 
+		{
+			SetCam1.rect = new Rect(0,0,0.5f,1);
+			SetCam2.rect = new Rect(0.5f,0,0.5f, 1);
+		} 
+		else if (InputManager.Devices.Count == 3) 
+		{
+			SetCam1.rect = new Rect(0,0.5f,0.5f,0.5f);
+			SetCam2.rect = new Rect(0.5f,0.5f,0.5f,0.5f);
+			SetCam3.rect = new Rect(0,0,0.5f,0.5f);
+			AllSeeingEye.rect = new Rect(0.5f,0,0.5f,0.5f);
+		} 
+		else if (InputManager.Devices.Count == 4) 
+		{
+			SetCam1.rect = new Rect(0,0.5f,0.5f,0.5f);
+			SetCam2.rect = new Rect(0.5f,0.5f,0.5f,0.5f);
+			SetCam3.rect = new Rect(0,0,0.5f,0.5f);
+			SetCam3.rect = new Rect(0.5f,0,0.5f,0.5f);
+		}
 	}
 
 	void FixedUpdate()
 	{
         var inputDevice = (InputManager.Devices.Count > playerNum) ? InputManager.Devices[playerNum] : null;
-        if (inputDevice == null)
+      
+		if (inputDevice == null)
         {
 			playerobj.SetActive(false);
 			Debug.Log (playerobj + "is a fag");
@@ -61,6 +94,11 @@ public class Move : MonoBehaviour {
         {
         	UpdateShipWithInputDevice( inputDevice );
         }
+
+		if (boostAmt <= 1000) 	
+		{
+		boostAmt = boostAmt + 2;
+		}
     }
         
     void LateUpdate()
@@ -106,28 +144,17 @@ public class Move : MonoBehaviour {
 		{
 			Shoot ();
 		}
-
-
-
-//		if (boostAmt <= 1000) 	
-//		{
-//			boostAmt = boostAmt + 2;
-//		}
-//
-//		if (boost > 0 && boostAmt > 0) 
-//		{
-//			speed = transform.forward * boost * boostMod;
-//			boostAmt = boostAmt - (10 * boost);
-//			booster.SetColor ("_EmissionColor", Color.red);
-//		} 
-//		else 
-//		{	
-//			booster.SetColor ("_EmissionColor", Color.black);
-//		}
-
-	
-	
-	
+			
+		if (inputDevice.RightBumper > 0 && boostAmt > 0) 
+		{
+			EachplayerRigid.AddForce(EachplayerTrans.forward * BoostMod);
+			boostAmt = boostAmt - 20f;
+			booster.SetColor ("_EmissionColor", Color.red);
+		} 
+		else 
+		{	
+			booster.SetColor ("_EmissionColor", Color.black);
+		}
 	}
 
 
@@ -143,28 +170,18 @@ public class Move : MonoBehaviour {
 			Invoke ("FireBuffer",fireRate);
 		}
 	}
-		
 
 	void FireBuffer ()
 	{
 		fireBuffer = 0;
 	}
 
-
-
-
-
-
-
-
-
-
-
 	void SetUIText()
 	{
 		speedValue = Mathf.Pow(Mathf.Pow(EachplayerRigid.velocity.x,2F) + Mathf.Pow(EachplayerRigid.velocity.y,2F) + Mathf.Pow(EachplayerRigid.velocity.z,2F),.5F);
 		speedText.text = "Speed: " + speedValue.ToString();
 		boostText.text = "Boost: " + boostAmt.ToString();
+		Debug.Log("SetUIText()");
 	}
 
 }
