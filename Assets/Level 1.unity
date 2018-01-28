@@ -339,6 +339,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 23357097608912056, guid: 9056403538d54de45bef2fb6ac02fa46,
+        type: 2}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 25e6d025dadc08d4c8d2f9804b7bdae5, type: 2}
+    - target: {fileID: 23357097608912056, guid: 9056403538d54de45bef2fb6ac02fa46,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 25e6d025dadc08d4c8d2f9804b7bdae5, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9056403538d54de45bef2fb6ac02fa46, type: 2}
   m_IsPrefabParent: 0
@@ -470,7 +480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedText: {fileID: 934786841}
   boostText: {fileID: 765459102}
-  booster: {fileID: 2100000, guid: e1454e7fe2044064fac70675efba86df, type: 2}
+  booster: {fileID: 2100000, guid: 2a739e6c2d393f44dbe27bcb86171dda, type: 2}
   bulletPosition: {fileID: 1825077242}
   Bullet: {fileID: 1525943913746892, guid: f13ad397a32048149b9f22fda9e6c60f, type: 2}
   playerNum: 3
@@ -2081,6 +2091,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.050000012
       objectReference: {fileID: 0}
+    - target: {fileID: 1479384886495286, guid: 9056403538d54de45bef2fb6ac02fa46, type: 2}
+      propertyPath: m_Name
+      value: Booster 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9056403538d54de45bef2fb6ac02fa46, type: 2}
   m_IsPrefabParent: 0
@@ -2700,6 +2714,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 23357097608912056, guid: 9056403538d54de45bef2fb6ac02fa46,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2a739e6c2d393f44dbe27bcb86171dda, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9056403538d54de45bef2fb6ac02fa46, type: 2}
   m_IsPrefabParent: 0
@@ -3039,7 +3058,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedText: {fileID: 559757760}
   boostText: {fileID: 2094646171}
-  booster: {fileID: 2100000, guid: e1454e7fe2044064fac70675efba86df, type: 2}
+  booster: {fileID: 2100000, guid: 1ae39bbf86a3f3d4fa606a00805b9040, type: 2}
   bulletPosition: {fileID: 1581082258}
   Bullet: {fileID: 1525943913746892, guid: f13ad397a32048149b9f22fda9e6c60f, type: 2}
   playerNum: 2
@@ -3122,6 +3141,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 23357097608912056, guid: 9056403538d54de45bef2fb6ac02fa46,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1ae39bbf86a3f3d4fa606a00805b9040, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9056403538d54de45bef2fb6ac02fa46, type: 2}
   m_IsPrefabParent: 0
@@ -3293,7 +3317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedText: {fileID: 497958911}
   boostText: {fileID: 1270366607}
-  booster: {fileID: 2100000, guid: e1454e7fe2044064fac70675efba86df, type: 2}
+  booster: {fileID: 2100000, guid: 25e6d025dadc08d4c8d2f9804b7bdae5, type: 2}
   bulletPosition: {fileID: 622399854}
   Bullet: {fileID: 1525943913746892, guid: f13ad397a32048149b9f22fda9e6c60f, type: 2}
   playerNum: 1
