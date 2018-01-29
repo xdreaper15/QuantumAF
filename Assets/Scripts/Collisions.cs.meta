@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scripts/Collisions.cs.meta
 guid: 53b4c180e1c7bd545bda1f76f6a5ab4d
 timeCreated: 1517181318
+=======
+guid: ab5879b0a312b034cbbe7674f2ead79c
+timeCreated: 1516947692
+>>>>>>> e7e45d9dda9692eec39f5ebe4185e471815108c0:Assets/Scripts/PlayerSelect.cs.meta
 licenseType: Free
 MonoImporter:
   externalObjects: {}

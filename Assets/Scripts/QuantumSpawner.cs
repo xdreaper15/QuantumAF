@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class QuantumSpawner : MonoBehaviour 
 {
 
+	public int zSpawnOffset;
 	public Transform Warning; //Warning Information Reference
 	public Transform Asteroid; //Asteroid Information Reference
 	public GameObject WarningField; //Warning Object
@@ -27,11 +28,8 @@ public class QuantumSpawner : MonoBehaviour
 	private int astTorqY; //Y-Axis Torque on Asteroid
 	private int astTorqZ; //Z-Axis Torque on Asteroid
 	private int spawnLocX; //X Position of Asteroid Spawn
-	[SerializeField]public int xSpawnOffset;
 	private int spawnLocY; //X Position of Asteroid Spawn
-	[SerializeField]public int ySpawnOffset;
 	private int spawnLocZ; //X Position of Asteroid Spawn
-	[SerializeField]public int zSpawnOffset;
 	private int startAstRotationX; //X-Axis Staritiong Rotation of Asteroid
 	private int startAstRotationY; //Y-Axis Staritiong Rotation of Asteroid
 	private int startAstRotationZ; //Z-Axis Staritiong Rotation of Asteroid
@@ -79,7 +77,7 @@ public class QuantumSpawner : MonoBehaviour
 		spawnLocY = Random.Range (-maxSpawnRadius, maxSpawnRadius); //spawn at random Y position
 		spawnLocZ = Random.Range (-maxSpawnRadius, maxSpawnRadius); //spawn at random Z position
 
-		astSpawn.Set (spawnLocX + xSpawnOffset, spawnLocY + ySpawnOffset, spawnLocZ + zSpawnOffset); //assigns ASTEROID spawn position
+		astSpawn.Set (spawnLocX, spawnLocY, spawnLocZ); //assigns ASTEROID spawn position
 
 		Warning.localScale = new Vector3(warningSize, warningSize, warningSize); // sets the size of the WARNING
 		Asteroid.localScale = new Vector3 (astSize, astSize, astSize); //sets the size of the ASTEROID
