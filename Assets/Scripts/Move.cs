@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using InControl;
 
 public class Move : MonoBehaviour {
+<<<<<<< HEAD
 	public float pitchSens = 300*3.5f;
 	public float rollSens = 600*3.5f;
 	public float yawSens = 600*3.5f;
@@ -20,6 +21,35 @@ public class Move : MonoBehaviour {
 	float ThrustMod = 40;
 	float BoostMod = 30;
 
+=======
+
+<<<<<<< HEAD
+	public float pitchSens = 1000f;
+	public float rollSens = 1000f;
+	public float yawSens = 1000f;
+	[SerializeField]public static float boostAmt;
+	[SerializeField]public static float speedValue;
+	public static float boostStart = 500f;
+	private Vector3 speed;
+	private Vector3 strafeSpeed;
+	float ThrustMod = 50;
+	//float boostMod = 2;
+=======
+	private float pitchSens = 300*3.5f;
+	private float rollSens = 600*3.5f;
+	private float yawSens = 600*3.5f;
+	public float boostAmt1;
+	public float boostAmt2;
+	public float boostAmt3;
+	public float boostAmt4;
+	public float boostAmtUI;
+	private static float speedValue;
+	public static float boostStart = 500f;
+	private Vector3 speed;
+	float ThrustMod = 40;
+	float BoostMod = 30;
+>>>>>>> e7e45d9dda9692eec39f5ebe4185e471815108c0
+>>>>>>> b7fba94... merged most of his cahnges into mine
 	public Text speedText;
 	public Text boostText;
 	public static Rigidbody rb;
