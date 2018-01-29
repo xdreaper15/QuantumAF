@@ -33,3 +33,8 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Assets/InControl/Source/XInput/XInputInterface\.dll\.meta
+
+Assets/Prefabs/Asteroid\.prefab
+
+Assets/Prefabs/WarningField\.prefab
