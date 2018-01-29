@@ -22,7 +22,7 @@ public class Follow : MonoBehaviour {
 
 		transform.rotation = Play.transform.rotation;
 
-		changeFOV = 60 + rb.velocity.x * transform.forward.x + rb.velocity.y * transform.forward.y + rb.velocity.z * transform.forward.z;
+		changeFOV = 70 + rb.velocity.x * transform.forward.x + rb.velocity.y * transform.forward.y + rb.velocity.z * transform.forward.z;
 		cameraFOV.fieldOfView = changeFOV;
 	}
 }

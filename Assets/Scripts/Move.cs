@@ -7,7 +7,7 @@ using InControl;
 
 public class Move : MonoBehaviour {
 
-	private float pitchSens = 300*3.5f;
+	private float pitchSens = 400*3.5f;
 	private float rollSens = 600*3.5f;
 	private float yawSens = 600*3.5f;
 	public float boostAmt1;
@@ -22,14 +22,15 @@ public class Move : MonoBehaviour {
 	float BoostMod = 30;
 	public Text speedText;
 	public Text boostText;
+	public Text healthText;
 	public static Rigidbody rb;
 	public Material booster; 
 
 	private float fireBuffer;
 	private float fireRate = 0.1f;
-	public Transform bulletPosition;
+	public Transform bulletPosition1, bulletPosition2;
 	public GameObject Bullet;
-	private float bulletSpeed = 10000f;
+	private float bulletSpeed = 3000f;
 
 	public int playerNum;
 	public GameObject playerobj;
@@ -46,11 +47,13 @@ public class Move : MonoBehaviour {
 	float intRightsticky;
 	float intLeftsticky;
 
-	private float player1Health = 2;
-	private float player2Health = 2;
-	private float player3Health = 2;
-	private float player4Health = 2;
+	private float playerhealth = 7;
+	private float player1Health;
+	private float player2Health;
+	private float player3Health;
+	private float player4Health ;
 	public int player1Hit;
+	public float healthUI;
 
 
 	void Start () 
@@ -62,6 +65,11 @@ public class Move : MonoBehaviour {
 		boostAmt2 = boostStart;
 		boostAmt3 = boostStart;
 		boostAmt4 = boostStart;
+		player1Health = playerhealth;
+		player2Health = playerhealth;
+		player3Health = playerhealth;
+		player4Health = playerhealth;
+		healthUI = playerhealth;
 		SetUIText ();
 
 		if (InputManager.Devices.Count == 1) 
@@ -115,24 +123,44 @@ public class Move : MonoBehaviour {
 		if (collisionInfo.collider.tag == "Bullet") {
 			if (gameObject.tag == "Player 1") {
 				player1Health--;
+				healthUI = player1Health;
 				if (player1Health == 0) {
 					playerobj.SetActive (false);
 				}
 			} else if (playerobj.tag == "Player 2") {
 				player2Health--;
+				healthUI = player2Health;
 				if (player2Health == 0) {
 					playerobj.SetActive (false);
 				}
 			} else if (playerobj.tag == "Player 3") {
 					player3Health--;
+					healthUI = player3Health;
 				if (player3Health == 0) {
 					playerobj.SetActive (false);
 				}
 			} else if (playerobj.tag == "Player 4") {
 						player4Health--;
+						healthUI = player4Health;
 				if (player4Health == 0) {
 					playerobj.SetActive (false);
 				}
+			}
+		}
+
+		if (collisionInfo.collider.tag == "Sun") {
+			if (gameObject.tag == "Player 1") {
+					healthUI = 0;
+					playerobj.SetActive (false);
+			} else if (playerobj.tag == "Player 2") {
+					healthUI = 0;
+					playerobj.SetActive (false);
+			} else if (playerobj.tag == "Player 3") {
+					healthUI = 0;
+					playerobj.SetActive (false);
+			} else if (playerobj.tag == "Player 4") {
+					healthUI = 0;
+					playerobj.SetActive (false);
 			}
 		}
 	}
@@ -229,10 +257,14 @@ public class Move : MonoBehaviour {
 		if (fireBuffer == 0)
 		{
 			fireBuffer = 1;
-			GameObject bulletclone = (GameObject)Instantiate (Bullet, bulletPosition.position, bulletPosition.rotation); //Spawns Bullet Clone
+			GameObject bulletclone = (GameObject)Instantiate (Bullet, bulletPosition1.position, bulletPosition1.rotation); //Spawns Bullet Clone
 			Rigidbody bulletRigid = bulletclone.GetComponent<Rigidbody>();
 			bulletRigid.AddForce (EachplayerTrans.transform.forward * bulletSpeed);
 			Destroy (bulletclone, 1f);
+			GameObject bulletclone2 = (GameObject)Instantiate (Bullet, bulletPosition2.position, bulletPosition2.rotation); //Spawns Bullet Clone
+			Rigidbody bulletRigid2 = bulletclone2.GetComponent<Rigidbody>();
+			bulletRigid2.AddForce (EachplayerTrans.transform.forward * bulletSpeed);
+			Destroy (bulletclone2, 1f);
 			Invoke ("FireBuffer",fireRate);
 		}
 	}
@@ -247,6 +279,7 @@ public class Move : MonoBehaviour {
 		speedValue = Mathf.Pow(Mathf.Pow(EachplayerRigid.velocity.x,2F) + Mathf.Pow(EachplayerRigid.velocity.y,2F) + Mathf.Pow(EachplayerRigid.velocity.z,2F),.5F);
 		speedText.text = "Speed: " + speedValue.ToString();
 		boostText.text = "Boost: " + boostAmtUI.ToString();
+		healthText.text = "Health: " + healthUI.ToString();
 	}
 
 }

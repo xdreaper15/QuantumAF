@@ -12,6 +12,7 @@ TagManager:
   - Player 3
   - Player 4
   - Player 2
+  - Sun
   layers:
   - Default
   - TransparentFX
