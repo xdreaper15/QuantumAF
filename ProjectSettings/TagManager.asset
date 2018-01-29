@@ -7,6 +7,11 @@ TagManager:
   - Warning Field
   - Asteroids
   - Barrier
+  - Bullet
+  - Player 1
+  - Player 3
+  - Player 4
+  - Player 2
   layers:
   - Default
   - TransparentFX
