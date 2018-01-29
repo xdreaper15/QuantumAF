@@ -40,7 +40,7 @@ public class QuantumSpawner : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		Debug.Log(SceneManager.GetActiveScene().ToString());
+		
 		if (SceneManager.GetActiveScene().ToString() == "MainMenu")
 		{
 			zSpawnOffset = 200;

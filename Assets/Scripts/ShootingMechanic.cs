@@ -14,7 +14,7 @@ public class ShootingMechanic : MonoBehaviour {
 	public GameObject Bullet;
 	public Transform objectpos;
 	private float bulletSpeed = 3000f;
-	private float fire;
+	//private float fire;
 	private float fireBuffer = 0;
 	[SerializeField]float fireRate = 0.3f;
 
@@ -32,8 +32,7 @@ public class ShootingMechanic : MonoBehaviour {
 		if (fireBuffer == 0)
 		{
 
-			if (fire == 1) 
-			{
+			
 				fireBuffer = 1;
 
 				GameObject bulletclone = (GameObject)Instantiate (Bullet, bulletPosition.position, bulletPosition.rotation); //Spawns Bullet Clone
@@ -43,7 +42,7 @@ public class ShootingMechanic : MonoBehaviour {
 				bulletRigid.AddForce (objectpos.transform.forward * bulletSpeed);
 
 				Invoke ("FireBuffer",fireRate);
-			}
+			
 		}
 	}
 

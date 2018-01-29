@@ -7,16 +7,16 @@ using InControl;
 
 public class Move : MonoBehaviour {
 
-	private float pitchSens = 200f;
-	private float rollSens = 600f;
-	private float yawSens = 600f;
+	public float pitchSens = 1000f;
+	public float rollSens = 1000f;
+	public float yawSens = 1000f;
 	[SerializeField]public static float boostAmt;
 	[SerializeField]public static float speedValue;
 	public static float boostStart = 500f;
 	private Vector3 speed;
 	private Vector3 strafeSpeed;
 	float ThrustMod = 50;
-	float boostMod = 2;
+	//float boostMod = 2;
 	public Text speedText;
 	public Text boostText;
 	public static Rigidbody rb;

@@ -468,6 +468,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d7ef342880d0240b96706c8197ddb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pitchSens: 1000
+  rollSens: 1000
+  yawSens: 1000
   speedText: {fileID: 934786841}
   boostText: {fileID: 765459102}
   booster: {fileID: 2100000, guid: e1454e7fe2044064fac70675efba86df, type: 2}
@@ -475,15 +478,8 @@ MonoBehaviour:
   Bullet: {fileID: 1525943913746892, guid: f13ad397a32048149b9f22fda9e6c60f, type: 2}
   playerNum: 3
   playerobj: {fileID: 278947899}
-  EachplayerRigid: {fileID: 0}
-  EachplayerTrans: {fileID: 0}
-  SetCam1: {fileID: 1449412279}
-  SetCam2: {fileID: 305239818}
-  SetCam3: {fileID: 1481032454}
-  SetCam4: {fileID: 1296338788}
-  AllSeeingEye: {fileID: 789448177}
-  speedText3: {fileID: 559757760}
-  boostText3: {fileID: 2094646171}
+  EachplayerRigid: {fileID: 278947902}
+  EachplayerTrans: {fileID: 278947903}
 --- !u!54 &278947902
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -674,6 +670,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d7ef342880d0240b96706c8197ddb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pitchSens: 1000
+  rollSens: 1000
+  yawSens: 1000
   speedText: {fileID: 1061641579}
   boostText: {fileID: 932555225}
   booster: {fileID: 2100000, guid: e1454e7fe2044064fac70675efba86df, type: 2}
@@ -681,15 +680,8 @@ MonoBehaviour:
   Bullet: {fileID: 1525943913746892, guid: f13ad397a32048149b9f22fda9e6c60f, type: 2}
   playerNum: 0
   playerobj: {fileID: 335346832}
-  EachplayerRigid: {fileID: 0}
-  EachplayerTrans: {fileID: 0}
-  SetCam1: {fileID: 1449412279}
-  SetCam2: {fileID: 305239818}
-  SetCam3: {fileID: 1481032454}
-  SetCam4: {fileID: 1296338788}
-  AllSeeingEye: {fileID: 789448177}
-  speedText3: {fileID: 559757760}
-  boostText3: {fileID: 2094646171}
+  EachplayerRigid: {fileID: 335346834}
+  EachplayerTrans: {fileID: 335346835}
 --- !u!54 &335346834
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3037,6 +3029,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d7ef342880d0240b96706c8197ddb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pitchSens: 1000
+  rollSens: 1000
+  yawSens: 1000
   speedText: {fileID: 559757760}
   boostText: {fileID: 2094646171}
   booster: {fileID: 2100000, guid: e1454e7fe2044064fac70675efba86df, type: 2}
@@ -3044,15 +3039,8 @@ MonoBehaviour:
   Bullet: {fileID: 1525943913746892, guid: f13ad397a32048149b9f22fda9e6c60f, type: 2}
   playerNum: 2
   playerobj: {fileID: 1829295489}
-  EachplayerRigid: {fileID: 0}
-  EachplayerTrans: {fileID: 0}
-  SetCam1: {fileID: 1449412279}
-  SetCam2: {fileID: 305239818}
-  SetCam3: {fileID: 1481032454}
-  SetCam4: {fileID: 1296338788}
-  AllSeeingEye: {fileID: 789448177}
-  speedText3: {fileID: 559757760}
-  boostText3: {fileID: 2094646171}
+  EachplayerRigid: {fileID: 1829295492}
+  EachplayerTrans: {fileID: 1829295493}
 --- !u!54 &1829295492
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3291,6 +3279,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d7ef342880d0240b96706c8197ddb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pitchSens: 1000
+  rollSens: 1000
+  yawSens: 1000
   speedText: {fileID: 497958911}
   boostText: {fileID: 1270366607}
   booster: {fileID: 2100000, guid: e1454e7fe2044064fac70675efba86df, type: 2}
@@ -3298,15 +3289,8 @@ MonoBehaviour:
   Bullet: {fileID: 1525943913746892, guid: f13ad397a32048149b9f22fda9e6c60f, type: 2}
   playerNum: 1
   playerobj: {fileID: 1988713977}
-  EachplayerRigid: {fileID: 0}
-  EachplayerTrans: {fileID: 0}
-  SetCam1: {fileID: 1449412279}
-  SetCam2: {fileID: 305239818}
-  SetCam3: {fileID: 1481032454}
-  SetCam4: {fileID: 1296338788}
-  AllSeeingEye: {fileID: 789448177}
-  speedText3: {fileID: 559757760}
-  boostText3: {fileID: 2094646171}
+  EachplayerRigid: {fileID: 1988713981}
+  EachplayerTrans: {fileID: 1988713982}
 --- !u!54 &1988713981
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3483,6 +3467,9 @@ MonoBehaviour:
   minAstSize: 10
   maxAstSize: 50
   maxSpawnRadius: 65
+  xSpawnOffset: 0
+  ySpawnOffset: 0
+  zSpawnOffset: 0
 --- !u!4 &2028411860
 Transform:
   m_ObjectHideFlags: 0
