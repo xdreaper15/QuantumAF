@@ -4,18 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Warning Field
   - Asteroids
-  - Barrier
-<<<<<<< HEAD
-  - Button
-=======
-  - Bullet
-  - Player 1
-  - Player 3
-  - Player 4
-  - Player 2
->>>>>>> e7e45d9dda9692eec39f5ebe4185e471815108c0
   layers:
   - Default
   - TransparentFX
